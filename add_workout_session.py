@@ -11,7 +11,7 @@ def add_workout(session_id, member_id, session_date, session_time, activity):
 
             new_session = (session_id, member_id, session_date, session_time, activity)
 
-            query = "INSERT INTO Members session_id, member_id, session_date, sesssion_time, activity) VALUES (%s, %s, %s, %s, %s)"
+            query = "INSERT INTO Members (session_id, member_id, session_date, sesssion_time, activity) VALUES (%s, %s, %s, %s, %s)"
 
             cursor.execute(query, new_session)
             conn.commit()
